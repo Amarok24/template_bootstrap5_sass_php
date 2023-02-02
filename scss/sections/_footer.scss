@@ -2,37 +2,38 @@
 @use "../media";
 
 footer {
-  .social-icons {
-    a {
-      text-decoration: none;
-      display: inline-block;
-      margin-left: 0.5em;
+	.social-icons {
+		a {
+			text-decoration: none;
+			display: inline-block;
+			margin-left: 0.5em;
 
-      svg {
-        max-width: 2em;
-        max-height: 2em;
-        text-decoration: none;
-        cursor: pointer;
-        color: $cTextLight;
-        transition: all 0.3s ease;
-      }
+			svg {
+				max-width: 2em;
+				max-height: 2em;
+				text-decoration: none;
+				cursor: pointer;
+				color: $cTextLight;
+				transition: all 0.3s ease;
+			}
 
-      &:hover svg {
-        //color: $cBrandPrimary;
-        transform: translateY(-5px);
-      }
-    }
-  }
+			&:hover svg {
+				//color: $cBrandPrimary;
+				transform: translateY(-5px);
+			}
+		}
+	}
 
-  .logo-footer {
-    margin: 2em 0 0 auto;
-    img {
-      max-width: 128px;
-      height: auto;
-    }
-  }
+	.logo-footer {
+		margin: 2em 0 0 auto;
+
+		img {
+			max-width: 128px;
+			height: auto;
+		}
+	}
 }
 
 body[data-darkmode="1"] footer {
-  background-color: $cBackgroundDark !important;
+	background-color: $cBackgroundDark !important;
 }

@@ -8,18 +8,18 @@ $container-max-widths: media.$container-max-widths;
 
 $spacer: 1rem;
 $spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  //5: $spacer * 3,
-  5: $spacer * 3.75,
-  // 3.75 because of anchor scroll on mobile
-  6: $spacer * 5,
-  7: $spacer * 7.5,
-  8: $spacer * 10.5,
-  9: $spacer * 14,
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer,
+	4: $spacer * 1.5,
+	//5: $spacer * 3,
+	5: $spacer * 3.75,
+	// 3.75 because of anchor scroll on mobile
+	6: $spacer * 5,
+	7: $spacer * 7.5,
+	8: $spacer * 10.5,
+	9: $spacer * 14,
 );
 
 $primary: $cBrandPrimary;
@@ -30,14 +30,14 @@ $link-color: $cBrandPrimary;
 $link-hover-color: lighten($cBrandPrimary, 50%);
 
 $display-font-sizes: (
-  // Controls the display-n classes
-  // https://getbootstrap.com/docs/5.0/content/typography/
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
+	// Controls the display-n classes
+	// https://getbootstrap.com/docs/5.0/content/typography/
+	1: 5rem,
+	2: 4.5rem,
+	3: 4rem,
+	4: 3.5rem,
+	5: 3rem,
+	6: 2.5rem
 );
 $display-font-weight: 400;
 $display-line-height: 1;

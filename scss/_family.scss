@@ -6,11 +6,13 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
 @mixin first($num) {
-	@if $num == 1 {
+	@if $num ==1 {
 		&:first-child {
 			@content;
 		}
-	} @else {
+	}
+
+	@else {
 		&:nth-child(-n + #{$num}) {
 			@content;
 		}
@@ -119,6 +121,7 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
 @mixin from-first-last($num) {
+
 	&:nth-child(#{$num}),
 	&:nth-last-child(#{$num}) {
 		@content;
@@ -252,6 +255,7 @@
 /// @group no-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin first-last() {
+
 	&:first-child,
 	&:last-child {
 		@content;
@@ -296,12 +300,14 @@
 /// @param {number} $index [0] - Index of the sorting
 @mixin child-index($num, $direction: "forward", $index: 0) {
 	@for $i from 1 through $num {
-		@if ($direction == "forward") {
+		@if ($direction =="forward") {
 			&:nth-child(#{$i}) {
 				z-index: order-index($i, $index);
 				@content;
 			}
-		} @else if ($direction == "backward") {
+		}
+
+		@else if ($direction =="backward") {
 			&:nth-last-child(#{$i}) {
 				z-index: order-index($i, $index);
 				@content;
