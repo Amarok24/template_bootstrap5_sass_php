@@ -20,8 +20,5 @@
 	},
 	"require": {
 		"twbs/bootstrap": "5.3.*@alpha"
-	},
-	"require-dev": {
-		"scssphp/scssphp": "~1.11"
 	}
 }
