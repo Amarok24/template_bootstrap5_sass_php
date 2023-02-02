@@ -1,0 +1,32 @@
+{
+  "name": "template-bootstrap-sass",
+  "version": "1.2.15",
+  "description": "An optimised starter template for Bootstrap and Sass.",
+  "license": "The Unlicense",
+  "browser": true,
+  "scripts": {
+    "watch:sass": "sass --no-source-map --watch scss:assets/css",
+    "compress:sass": "sass --style=compressed scss:assets/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Prazak",
+  "homepage": "https://github.com/Amarok24/template-bootstrap-sass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Amarok24/template-bootstrap-sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Amarok24/template-bootstrap-sass/issues"
+  },
+  "keywords": [
+    "bootstrap5",
+    "sass",
+    "scss"
+  ],
+  "devDependencies": {
+    "sass": ">=1.42.1"
+  },
+  "dependencies": {
+    "bootstrap": "5.x"
+  }
+}

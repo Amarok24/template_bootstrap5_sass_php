@@ -1,0 +1,31 @@
+@use "../palette" as *;
+
+
+button[type='reset'] {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:hover {
+    outline: 1px solid $cBrandPrimary;
+  }
+}
+
+%btn-custom {
+  font-size: inherit;
+  text-align: center;
+  border: 2px solid $cButton2;
+  border-radius: 0;
+  color: $cButton2;
+  background-color: white;
+  padding: 0.5em 1.3em;
+}
+
+.btn-custom {
+  @extend %btn-custom;
+
+  &:hover {
+    outline: 1px solid $cBrandSecondary;
+    color: $cButton2;
+  }
+}
