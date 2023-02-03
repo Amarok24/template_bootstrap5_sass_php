@@ -1,4 +1,4 @@
-@use "../palette" as *;
+@use "../palette" as p;
 
 
 button[type='reset'] {
@@ -7,16 +7,16 @@ button[type='reset'] {
 	text-decoration: underline;
 
 	&:hover {
-		outline: 1px solid $cBrandPrimary;
+		outline: 1px solid p.$c-brand-primary;
 	}
 }
 
 %btn-custom {
 	font-size: inherit;
 	text-align: center;
-	border: 2px solid $cButton2;
+	border: 2px solid p.$c-button-2;
 	border-radius: 0;
-	color: $cButton2;
+	color: p.$c-button-2;
 	background-color: white;
 	padding: 0.5em 1.3em;
 }
@@ -25,7 +25,7 @@ button[type='reset'] {
 	@extend %btn-custom;
 
 	&:hover {
-		outline: 1px solid $cBrandSecondary;
-		color: $cButton2;
+		outline: 1px solid p.$c-brand-secondary;
+		color: p.$c-button-2;
 	}
 }

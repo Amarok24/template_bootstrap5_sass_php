@@ -1,4 +1,4 @@
-@use "../palette" as *;
+@use "../palette" as p;
 @use "../media";
 
 html {
@@ -16,12 +16,12 @@ body {
 	font-size: 18px;
 	line-height: 1.6;
 	position: relative; // Needed for Bootstrap's ScrollSpy.
-	color: $cTextDark;
-	background-color: white;
+	//color: $c-text-dark;
+	//background-color: white;
 	padding-top: 63px;
 }
 
-#arrowScrollToTop {
+#arrow-scroll-to-top {
 	position: fixed;
 	z-index: 50;
 	right: 0;
@@ -30,10 +30,10 @@ body {
 	height: 50px;
 	cursor: pointer;
 	color: white;
-	background-color: rgba($cBrandPrimary, 0.4);
+	background-color: rgba(p.$c-brand-primary, 0.4);
 
 	&:hover {
-		background-color: $cBrandPrimary;
+		background-color: p.$c-brand-primary;
 	}
 
 	@include media.min("md") {
@@ -112,7 +112,7 @@ body {
 	}
 }
 
-#videoModal {
+#video-modal {
 	.modal-body {
 		position: relative;
 		padding-bottom: calc(9 / 16 * 100%);
@@ -150,7 +150,7 @@ body {
 			cursor: pointer;
 			backdrop-filter: sepia(90%);
 			border-radius: 50% 50%;
-			color: $cBrandPrimary;
+			color: p.$c-brand-primary;
 		}
 	}
 }
