@@ -1,11 +1,10 @@
-@use "palette" as *;
+@use "palette" as p;
 @use "media";
 
-// CUSTOM Bootstrap variables
-// See also https://getbootstrap.com/docs/5.3/customize/sass/
+// CUSTOM Bootstrap variable overrides
 
-$grid-breakpoints: media.$grid-breakpoints;
-$container-max-widths: media.$container-max-widths;
+$grid-breakpoints: media.$grid_breakpoints;
+$container-max-widths: media.$container_max_widths;
 
 $spacer: 1rem;
 $spacers: (
@@ -23,12 +22,12 @@ $spacers: (
 	9: $spacer * 14,
 );
 
-$primary: $cBrandPrimary;
-$secondary: $cBrandSecondary;
+$primary: p.$c-brand-primary;
+$secondary: p.$c-brand-secondary;
 //$warning: #ff7b00;
 
-$link-color: $cBrandPrimary;
-$link-hover-color: lighten($cBrandPrimary, 50%);
+$link-color: $primary;
+$link-hover-color: lighten($primary, 50%);
 
 $display-font-sizes: (
 	// Controls the display-n classes
@@ -40,91 +39,34 @@ $display-font-sizes: (
 	5: 3rem,
 	6: 2.5rem
 );
+
 $display-font-weight: 400;
 $display-line-height: 1;
-
-
-$navbar-light-color: $cBrandSecondary;
-$navbar-light-hover-color: $cBrandSecondary;
-$navbar-light-active-color: $cBrandSecondary;
-$navbar-light-disabled-color: silver;
-$navbar-light-toggler-icon-bg: none;
-$navbar-light-toggler-border-color: rgba($cBrandSecondary, 0.2);
-
-$navbar-dark-color: silver;
-$navbar-dark-hover-color: silver;
-$navbar-dark-active-color: silver;
-$navbar-dark-disabled-color: rgba(rgb(124, 88, 88), 0.25);
-$navbar-dark-toggler-icon-bg: none;
-$navbar-dark-toggler-border-color: rgba(white, 0.3);
-
-$navbar-nav-link-padding-x: 1rem;
 
 $btn-border-radius: 0;
 $btn-padding-x: 1.6em;
 $btn-padding-y: 0.8em;
 //$btn-hover-bg-shade-amount: 15%,
 $btn-hover-bg-tint-amount: 30%;
-$form-label-color: $cTextDark;
-$form-select-border-color: $cButton2;
-$input-border-color: $cButton2;
+
+$form-label-color: p.$c-text-dark;
+$form-select-border-color: p.$c-button-2;
+
+$input-border-color: p.$c-button-2;
 $input-border-width: 2px;
 $input-border-radius: 0;
-$component-active-bg: $cButton2;
+
+$component-active-bg: p.$c-button-2;
+
 $pagination-color: #707070;
 $pagination-active-color: white;
-$pagination-active-bg: $cBrandPrimary;
+$pagination-active-bg: $primary;
 $pagination-padding-y: 0.5rem;
 $pagination-padding-x: 1.2rem;
 $pagination-disabled-bg: #f0f0f0;
 $pagination-border-radius: 0;
-$pagination-hover-color: $cTextDark;
-//$pagination-hover-bg: $cBrandSecondary,
+$pagination-hover-color: p.$c-text-dark;
+//$pagination-hover-bg: p.$c-brand-secondary,
 
 // modal overlay opacity
 $modal-backdrop-opacity: 0.8;
-
-// Configuration
-@import "../vendor/twbs/bootstrap/scss/functions";
-@import "../vendor/twbs/bootstrap/scss/variables";
-@import "../vendor/twbs/bootstrap/scss/mixins";
-@import "../vendor/twbs/bootstrap/scss/utilities";
-
-// Layout & components
-@import "../vendor/twbs/bootstrap/scss/root";
-@import "../vendor/twbs/bootstrap/scss/reboot";
-@import "../vendor/twbs/bootstrap/scss/type";
-@import "../vendor/twbs/bootstrap/scss/images";
-@import "../vendor/twbs/bootstrap/scss/containers";
-@import "../vendor/twbs/bootstrap/scss/grid";
-//@import "../vendor/twbs/bootstrap/scss/tables";
-@import "../vendor/twbs/bootstrap/scss/forms";
-@import "../vendor/twbs/bootstrap/scss/buttons";
-@import "../vendor/twbs/bootstrap/scss/transitions";
-@import "../vendor/twbs/bootstrap/scss/dropdown";
-//@import "../vendor/twbs/bootstrap/scss/button-group";
-@import "../vendor/twbs/bootstrap/scss/nav";
-@import "../vendor/twbs/bootstrap/scss/navbar";
-//@import "../vendor/twbs/bootstrap/scss/card";
-//@import "../vendor/twbs/bootstrap/scss/accordion";
-//@import "../vendor/twbs/bootstrap/scss/breadcrumb";
-@import "../vendor/twbs/bootstrap/scss/pagination";
-//@import "../vendor/twbs/bootstrap/scss/badge";
-//@import "../vendor/twbs/bootstrap/scss/alert";
-//@import "../vendor/twbs/bootstrap/scss/progress";
-//@import "../vendor/twbs/bootstrap/scss/list-group";
-@import "../vendor/twbs/bootstrap/scss/close";
-//@import "../vendor/twbs/bootstrap/scss/toasts";
-@import "../vendor/twbs/bootstrap/scss/modal";
-//@import "../vendor/twbs/bootstrap/scss/tooltip";
-//@import "../vendor/twbs/bootstrap/scss/popover";
-//@import "../vendor/twbs/bootstrap/scss/carousel";
-//@import "../vendor/twbs/bootstrap/scss/spinners";
-//@import "../vendor/twbs/bootstrap/scss/offcanvas";
-//@import "../vendor/twbs/bootstrap/scss/placeholders";
-
-// Helpers
-@import "../vendor/twbs/bootstrap/scss/helpers";
-
-// Utilities
-@import "../vendor/twbs/bootstrap/scss/utilities/api";

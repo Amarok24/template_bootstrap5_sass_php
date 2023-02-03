@@ -1,6 +1,4 @@
-<svg
-xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <!--GRADIENTS-->
     <linearGradient id="my-cool-gradient" x2="1" y2="1">
         <stop offset="0%" stop-color="#447799" />

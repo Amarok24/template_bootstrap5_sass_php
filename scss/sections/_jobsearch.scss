@@ -1,11 +1,11 @@
-@use "../palette" as *;
+@use "../palette" as p;
 
-$spacer: 1rem;
-$tabledata-padding: $spacer * 1;
+$my-spacer: 1rem;
+$tabledata-padding: $my-spacer * 1;
 
 .jobsearch-wrapper {
 	background-color: white;
-	color: $cTextDark;
+	color: p.$c-text-dark;
 	border-radius: 20px;
 
 	button[type="submit"] {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" data-bs-theme="light">
 
 <head>
 	<meta charset="UTF-8" />
@@ -16,22 +16,18 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 
-	<link rel="stylesheet" href="./assets/css/style.css" />
+	<link rel="stylesheet" href="./assets/css/style.css?<?= time(); ?>" />
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" />
 
-	<script src="./assets/scripts/bootstrap.bundle.min.js" defer="defer"></script>
-	<script src="./assets/scripts/appendix.js" defer="defer"></script>
-	<script src="./assets/scripts/smoothscroll-polyfill.min.js" defer="defer">
-		/* Polyfill for Safari browser */</script>
+	<script src="./assets/scripts/bootstrap.bundle.min.js" defer=""></script>
+	<script src="./assets/scripts/appendix.js" defer=""></script>
 </head>
 
-<body id="home" data-darkmode="0" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-root-margin="0px 0px 150px">
+<body id="home" data-bs-spy="scroll" data-bs-target="#homepage-nav" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -60%">
+	<!-- https://getbootstrap.com/docs/5.3/components/scrollspy/ -->
 
-	<!-- To use a dark navbar directly (without user interaction) simply change data-darkmode to "1" and also change the classname below to navbar-dark  -->
-
-	<nav id="pageNav" class="navbar navbar-expand-lg fixed-top navbar-light">
-
+	<nav id="homepage-nav" class="navbar navbar-expand-lg fixed-top">
 		<div class="container-md">
 			<a class="navbar-brand" href="#">
 				<!-- 2 logo versions, the 2nd one is for darkmode. Delete it if not needed. -->
@@ -197,12 +193,12 @@
 				</svg>
 			</div>
 
-			<div id="videoModal" class="modal" tabindex="-1">
+			<div id="video-modal" class="modal" tabindex="-1">
 				<div class="modal-dialog modal-dialog-centered modal-lg">
 					<div class="modal-content">
 						<div class="modal-body">
 
-							<div id="customVideo">
+							<div id="custom-video">
 								<p>Loading video...</p>
 								<!--
 								Video will be loaded on demand (page performance).
@@ -432,55 +428,41 @@
 		<div class="container-md py-4 py-sm-6 fs-6">
 			<div class="row gy-5">
 				<div class="col-lg-8">
-					&copy; 2021 Dummy Company<br />
+					&copy; 2023 Dummy Company<br />
 					<br />
 					Disclaimer Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
 					assumenda cumque expedita consequuntur nesciunt veniam illo, iusto numquam,
 					provident nostrum iure commodi odit sequi minima dolores reprehenderit
 					explicabo.<br />
 					<br />
-					GitHub repository of this starter template: <a href="https://github.com/Amarok24/template-bootstrap-sass">https://github.com/Amarok24/template-bootstrap-sass</a>
+					GitHub repository of this starter template: <a href="https://github.com/Amarok24/template_bootstrap5_sass_php">https://github.com/Amarok24/template_bootstrap5_sass_php</a>
 					<br /><br />
 					<div class="themeSwitch" aria-hidden="true">
-						<a href="#" id="toggleLightDarkMode">Toggle light/dark mode</a>
+						<a href="#" id="toggle-light-mode">
+							Toggle light/dark mode
+						</a>
 					</div>
 				</div>
 				<div class="col-lg-4 text-end social-icons">
-					<a href="#">
-						<svg alt="LinkedIn" title="LinkedIn" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-linkedin-square" />
-						</svg>
-					</a>
-					<a href="#" target="_blank">
-						<svg alt="Twitter" title="Twitter" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-twitter-square" />
-						</svg>
-					</a>
 					<a href="#" target="_blank">
 						<svg alt="Facebook" title="Facebook" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-facebook-square" />
+							<use href="./assets/icons/social-networks.svg#icon-facebook-square" />
 						</svg>
 					</a>
 					<a href="#">
 						<svg alt="Instagram" title="Instagram" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-instagram-square" />
+							<use href="./assets/icons/social-networks.svg#icon-instagram-square" />
 						</svg>
 					</a>
 					<a href="#" target="_blank">
 						<svg alt="YouTube" title="YouTube" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-youtube-square" />
+							<use href="./assets/icons/social-networks.svg#icon-youtube-square" />
 						</svg>
 					</a>
 					<!--
 					<a href="#">
 						<svg alt="Pinterest" title="Pinterest" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-pinterest-square" />
-						</svg>
-					</a>
-
-					<a href="#">
-						<svg alt="Xing" title="Xing" loading="lazy">
-							<use href="assets/icons/social-networks.svg#icon-xing-square" />
+							<use href="./assets/icons/social-networks.svg#icon-pinterest-square" />
 						</svg>
 					</a>
 -->
@@ -499,7 +481,7 @@
 	</footer>
 
 
-	<div id="arrowScrollToTop" title="Scroll to top" tabindex="-1">
+	<div id="arrow-scroll-to-top" title="Scroll to top" tabindex="-1">
 		<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="18px" viewBox="0 0 20 20" width="18px" fill="currentColor">
 			<g>
 				<rect fill="none" height="20" width="20" />

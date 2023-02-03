@@ -1,2 +1,8 @@
 * text=auto
 * text eol=lf
+
+# Manually marking files as binary (but Git tries to detect it automatically)
+*.png -text -diff
+*.jpg -text -diff
+*.webp -text -diff
+*.woff2 -text -diff

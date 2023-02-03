@@ -37,3 +37,9 @@ composer install
 ```
 
 to install all dependencies (Bootstrap).
+
+### Older project (Bootstrap 5.1 and NodeJS)
+
+There is also an older version of this project at
+[GitHub](https://github.com/Amarok24/template-bootstrap-sass) which uses Bootrap
+5.1 and NPM as package manager.

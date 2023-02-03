@@ -1,8 +1,6 @@
 //@use 'family';
-//@use 'fonts';
 
-// Custom Bootstrap
-@use 'custom';
-
-@use 'sections';
-@use 'components';
+@import 'fonts';
+@import 'boot';
+@import 'sections';
+@import 'components';

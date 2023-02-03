@@ -1,12 +1,15 @@
-@use "../palette" as *;
+@use "../palette" as p;
 @use "../media";
 @use "sass:color";
 
-@mixin nav-item-theme($mobileMarkColor, $desktopMarkColor, $breakPointName: "lg") {
-	.nav-item {
-		border-bottom: 1px solid $mobileMarkColor;
+$navbar-nav-link-padding-x: 1rem;
 
-		@include media.min($breakPointName) {
+
+@mixin nav-item-theme($mobile_mark_color, $desktop_mark_color, $breakpoint_name: "lg") {
+	.nav-item {
+		border-bottom: 1px solid $mobile_mark_color;
+
+		@include media.min($breakpoint_name) {
 			border-bottom: none;
 		}
 
@@ -15,33 +18,60 @@
 		}
 
 		& > a {
-			@include media.min($breakPointName) {
+			@include media.min($breakpoint_name) {
 				border-bottom: 3px solid transparent;
 			}
 		}
 
 		& > a.active {
-			background-color: $mobileMarkColor;
+			background-color: $mobile_mark_color;
 			padding-left: 0.5rem;
 
-			@include media.min($breakPointName) {
+			@include media.min($breakpoint_name) {
 				background-color: initial;
-				padding-left: 1rem;
-				border-bottom: 3px solid $desktopMarkColor;
+				border-bottom: 3px solid $desktop_mark_color;
 			}
 		}
 
 		&:hover > a {
-			@include media.min($breakPointName) {
-				border-bottom: 3px solid rgba($desktopMarkColor, 0.2);
+			@include media.min($breakpoint_name) {
+				border-bottom: 3px solid rgba($desktop_mark_color, 0.2);
 			}
 		}
 	}
 }
 
-body[data-darkmode="0"] #pageNav {
-	background-color: white;
 
+// CSS class .navbar-light is deprecated as of Bootstrap 5.3, but
+// BS still uses "$navbar-light-" naming for default navbar theme, but then
+// "$navbar-dark-" naming makes no sense anymore, since it is bound only
+// to CSS class .navbar-dark, so why avoid .navbar-light and use .navbar-dark?
+// That's why I try to avoid both of them.
+
+@include color-mode(light) {
+	.navbar {
+		background-color: $light;
+		// Following taken directly from _navbar.scss
+		//--#{$prefix}navbar-color: silver;
+		--#{$prefix}navbar-hover-color: black;
+		--#{$prefix}navbar-active-color: #{$secondary};
+		--#{$prefix}navbar-toggler-icon-bg: none;
+		--#{$prefix}navbar-toggler-border-color: #{rgba($secondary, 0.5)};
+	}
+
+	.navbar-toggler {
+		.navbar-toggler-icon {
+			@include media.menu_icon_opened(color.adjust($secondary, $lightness: 30%, $saturation: -60%));
+		}
+
+		&.collapsed {
+			.navbar-toggler-icon {
+				@include media.menu_icon_collapsed(color.adjust($secondary, $lightness: 30%, $saturation: -60%));
+			}
+		}
+	}
+
+	// Logo
 	.navbar-brand {
 		img {
 			&:last-of-type {
@@ -50,24 +80,34 @@ body[data-darkmode="0"] #pageNav {
 		}
 	}
 
+	@include nav-item-theme(color.adjust($secondary, $lightness: 65%), $secondary);
+}
+
+
+@include color-mode(dark) {
+	.navbar {
+		background-color: $body-bg-dark;
+		// Following taken directly from _navbar.scss
+		//--#{$prefix}navbar-color: silver;
+		--#{$prefix}navbar-hover-color: white;
+		--#{$prefix}navbar-active-color: #{$primary};
+		--#{$prefix}navbar-toggler-icon-bg: none;
+		--#{$prefix}navbar-toggler-border-color: #{rgba(white, 0.5)};
+	}
+
 	.navbar-toggler {
 		.navbar-toggler-icon {
-			@include media.menuIconOpened(color.adjust($cBrandSecondary, $lightness: 30%, $saturation: -60%));
+			@include media.menu_icon_opened(silver);
 		}
 
 		&.collapsed {
 			.navbar-toggler-icon {
-				@include media.menuIconCollapsed(color.adjust($cBrandSecondary, $lightness: 30%, $saturation: -60%));
+				@include media.menu_icon_collapsed(silver);
 			}
 		}
 	}
 
-	@include nav-item-theme(color.adjust($cBrandSecondary, $lightness: 65%), $cBrandSecondary);
-}
-
-body[data-darkmode="1"] #pageNav {
-	background-color: $cBackgroundDark;
-
+	// Logo
 	.navbar-brand {
 		img {
 			&:first-of-type {
@@ -76,21 +116,10 @@ body[data-darkmode="1"] #pageNav {
 		}
 	}
 
-	.navbar-toggler {
-		.navbar-toggler-icon {
-			@include media.menuIconOpened(silver);
-		}
-
-		&.collapsed {
-			.navbar-toggler-icon {
-				@include media.menuIconCollapsed(silver);
-			}
-		}
-	}
-
-	@include nav-item-theme(grey, $cBrandPrimary);
+	@include nav-item-theme(color.adjust($primary, $lightness: 65%), $primary);
 }
 
+// Logo, both light+dark
 .navbar-brand {
 	img {
 		width: auto;
@@ -102,7 +131,8 @@ body[data-darkmode="1"] #pageNav {
 	}
 }
 
-.navbar-js {
+.navbar-js-minified {
+	// Appearance of navbar if user scrolls down a bit
 	min-height: auto;
 	padding-top: 0.3rem;
 	padding-bottom: 0.3rem;

@@ -1,4 +1,4 @@
-@use "../palette" as *;
+@use "../palette" as p;
 @use "../media";
 
 footer {
@@ -13,12 +13,12 @@ footer {
 				max-height: 2em;
 				text-decoration: none;
 				cursor: pointer;
-				color: $cTextLight;
+				color: p.$c-text-light;
 				transition: all 0.3s ease;
 			}
 
 			&:hover svg {
-				//color: $cBrandPrimary;
+				//color: $c-brand-primary;
 				transform: translateY(-5px);
 			}
 		}
@@ -34,6 +34,8 @@ footer {
 	}
 }
 
-body[data-darkmode="1"] footer {
-	background-color: $cBackgroundDark !important;
+@include color-mode(dark) {
+	.footer {
+		background-color: $body-bg-dark;
+	}
 }
