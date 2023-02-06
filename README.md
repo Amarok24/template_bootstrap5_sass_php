@@ -1,11 +1,11 @@
-# template_bootstrap5_sass_php
+# Template: Bootstrap 5 / Sass (SCSS) / PHP
 
-An optimized starter template for Bootstrap 5.3 and Sass (SCSS), Composer (PHP)
+An optimized starter template for Bootstrap 5.3 and Sass (SCSS). Composer (PHP)
 is used as dependency manager for Bootstrap. A Sass compiler is not included, I
 recommend [Dart Sass](https://github.com/sass/dart-sass/releases), then you can
 use both `sass_watch.sh` and `sass_compress.sh` shell scripts.
 
-Demo: https://amarok24.github.io/template_bootstrap5_sass_php/
+Demo: https://app.horasion.eu/bootstrap-template/
 
 - Tested on different desktop browsers and on Google Android and Apple iOS
   devices
@@ -15,7 +15,7 @@ Demo: https://amarok24.github.io/template_bootstrap5_sass_php/
 - Optimized for fast loading
 - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
   results: mobile 94%, desktop 99%
-- Basic setup for switching between light/dark mode implemented
+- Basic setup for switching between light/dark mode included (new approach since BS 5.3)
 
 ## Use as a project
 
@@ -41,5 +41,5 @@ to install all dependencies (Bootstrap).
 ### Older project (Bootstrap 5.1 and NodeJS)
 
 There is also an older version of this project at
-[GitHub](https://github.com/Amarok24/template-bootstrap-sass) which uses Bootrap
+[GitHub](https://github.com/Amarok24/template-bootstrap-sass) which uses Bootstrap
 5.1 and NPM as package manager.
