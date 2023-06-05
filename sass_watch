@@ -1,8 +1,7 @@
-#!/bin/sh
+#!/bin/zsh
+# Change zsh to bash if you only have bash installed
 
-# Make sure you have `sass` executable in your path.
-
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ $OSTYPE == "linux-gnu"* ]]; then
 	sass --no-source-map --watch scss:assets/css
 else
 	sass.bat --no-source-map --watch scss:assets/css

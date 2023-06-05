@@ -1,0 +1,9 @@
+#!/bin/zsh
+# Change zsh to bash if you only have bash installed
+
+if [ $OSTYPE = "linux-gnu" ]
+then
+	sass --style=compressed scss:assets/css
+else
+	sass.bat --style=compressed scss:assets/css
+fi
