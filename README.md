@@ -5,7 +5,7 @@ is used as dependency manager for Bootstrap. A Sass compiler is not included, I
 recommend [Dart Sass](https://github.com/sass/dart-sass/releases), then you can
 use both `sass_watch.sh` and `sass_compress.sh` shell scripts.
 
-Demo: https://app.horasion.eu/bootstrap-template/
+Online demo [here](https://app.introweb.eu/bootstrap-template/)
 
 - Tested on different desktop browsers and on Google Android and Apple iOS
   devices
